@@ -1,0 +1,33 @@
+{
+  "name": "midden",
+  "version": "0.1.0",
+  "description": "Pretty data dumps for your browser (similar to PHP's Krumo)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://criticalmash@github.com/criticalmash/midden.git"
+  },
+  "keywords": [
+    "dump",
+    "dpm",
+    "krumo"
+  ],
+  "author": "John O'Donnell (Critical Mash Inc.)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/criticalmash/midden/issues"
+  },
+  "homepage": "https://github.com/criticalmash/midden#readme",
+  "dependencies": {
+    "get-object-type": "0.0.2",
+    "lodash": "^4.13.1"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "jsdom": "^9.2.1",
+    "mocha": "*"
+  }
+}

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Midden Mockup</title>
+    <link rel="stylesheet" href="build/css/app.css">
+  </head>
+  <body>
+    <h1>Midden Mockup</h1>
+    <p>Mockup of how a propper midden output shoudl look.</p>
+    <p>Requires the includsion of the midden.css and midden.js files.</p>
+
+    <p>Midden output of an object hash</p>
+
+    <div class="midden-root">
+      <ul class="midden-node">
+        <li class="midden-child">
+          <div class="midden-element">... <em>(object, 4 properties)</em></div>
+          <div class="midden-nest">
+            <ul class="midden-node">
+              <li class="midden-child">
+                <div class="midden-element">
+                  cwd <em>(string, x characters)</em> 
+                  <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
+                </div>
+              </li>
+              <li class="midden-child">
+                <div class="midden-element">
+                  history <em>(array, 2 elements)</em> 
+                  <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
+                </div>
+                <div class="midden-nest">
+                  <ul class="midden-node">
+                    <li class="midden-child">
+                      <div class="midden-element">
+                        cwd <em>(string, x characters)</em> 
+                        <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
+                      </div>
+                    </li>
+                    <li class="midden-child">
+                      <div class="midden-element">
+                        cwd <em>(string, x characters)</em> 
+                        <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="midden-nest">
+      <ul class="midden-node">
+        <li class="midden-child">
+          element
+        </li>
+        <li class="midden-child">
+          element
+        </li>
+      </ul>
+    </div>
+
+    <div class="midden-nest">
+      <ul class="midden-node">
+        
+      </ul>
+    </div>
+
+
+    <h3>What an array looks like</h3>
+
+    <li class="midden-child">
+      <div class="midden-element">
+        <span>history</span> <em>(array, 2 elements)</em> 
+        <strong></strong> 
+      </div>
+      <div class="midden-nest">
+        <ul class="midden-node">
+          <li class="midden-child">
+            <div class="midden-element">
+              cwd <em>(string, x characters)</em> 
+              <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
+            </div>
+          </li>
+          <li class="midden-child">
+            <div class="midden-element">
+              cwd <em>(string, x characters)</em> 
+              <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+
+  <li class="midden-child">
+    <div class="midden-element">
+      <span>arrname</span> <em>(Array, x elements)</em><strong></strong>
+    </div>
+    <div class="midden-nest">
+      <ul class="midden-node">
+        <li class="midden-child">
+          <div class="midden-element">
+            <span>0</span> <em>(Array)</em><strong></strong>
+          </div>
+          <div class="midden-nest">
+            <ul class="midden-node">
+              <li class="midden-child">
+                <div class="midden-element">
+                  <span>0</span> <em>(Number)</em><strong>1</strong>
+                </div>
+              </li>
+              <li class="midden-child">
+                <div class="midden-element">
+                  <span>1</span> <em>(Number)</em><strong>2</strong>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="midden-child">
+          <div class="midden-element">
+            <span>1</span> <em>(Array)</em><strong></strong>
+          </div>
+          <div class="midden-nest">
+            <ul class="midden-node">
+              <li class="midden-child">
+                <div class="midden-element">
+                  <span>0</span> <em>(Number)</em><strong>3</strong>
+                </div>
+              </li>
+              <li class="midden-child">
+                <div class="midden-element">
+                  <span>1</span> <em>(Number)</em><strong>4</strong>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="midden-child">
+          <div class="midden-element">
+            <span>2</span> <em>(Array)</em><strong></strong>
+          </div>
+          <div class="midden-nest">
+            <ul class="midden-node">
+              <li class="midden-child">
+                <div class="midden-element">
+                  <span>0</span> <em>(Number)</em><strong>5</strong>
+                </div>
+              </li>
+              <li class="midden-child">
+                <div class="midden-element">
+                  <span>1</span> <em>(Number)</em><strong>6</strong>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+    <script src="build/js/app.js"></script>
+  </body>
+</html>
