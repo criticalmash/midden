@@ -14,43 +14,48 @@
     <p>Midden output of an object hash</p>
 
     <div class="midden-root">
-      <ul class="midden-node">
-        <li class="midden-child">
-          <div class="midden-element">... <em>(object, 4 properties)</em></div>
-          <div class="midden-nest">
-            <ul class="midden-node">
-              <li class="midden-child">
-                <div class="midden-element">
-                  cwd <em>(string, x characters)</em> 
-                  <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
-                </div>
-              </li>
-              <li class="midden-child">
-                <div class="midden-element">
-                  history <em>(array, 2 elements)</em> 
-                  <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
-                </div>
-                <div class="midden-nest">
-                  <ul class="midden-node">
-                    <li class="midden-child">
-                      <div class="midden-element">
-                        cwd <em>(string, x characters)</em> 
-                        <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
-                      </div>
-                    </li>
-                    <li class="midden-child">
-                      <div class="midden-element">
-                        cwd <em>(string, x characters)</em> 
-                        <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
+      <div class="midden-nest">
+        <ul class="midden-node">
+          <li class="midden-child">
+            <div class="midden-element"><span>Object Name</span> <em>(object, 4 properties)</em></div>
+            <div class="midden-nest">
+              <ul class="midden-node">
+                <li class="midden-child">
+                  <div class="midden-element">
+                    cwd <em>(string, x characters)</em> 
+                    <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
+                  </div>
+                </li>
+                <li class="midden-child">
+                  <div class="midden-element">
+                    history <em>(array, 2 elements)</em> 
+                    <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
+                  </div>
+                  <div class="midden-nest">
+                    <ul class="midden-node">
+                      <li class="midden-child">
+                        <div class="midden-element">
+                          cwd <em>(string, x characters)</em> 
+                          <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
+                        </div>
+                      </li>
+                      <li class="midden-child">
+                        <div class="midden-element">
+                          cwd <em>(string, x characters)</em> 
+                          <strong>/Users/john/Sites/assemble/assemble-navigation</strong> 
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="midden-stack">
+        Called From: <span>/Users/john/Sites/assemble/midden/test/midden-spec.js:57:22</span>
+      </div>
     </div>
 
     <div class="midden-nest">
@@ -163,6 +168,37 @@
       </ul>
     </div>
   </li>
+
+
+
+<div class="midden-root">
+  <p>testObject</p> 
+  <div class="midden-nest">
+    <ul class="midden-node">
+      <li class="midden-child">
+        <div class="midden-element">
+          <span>testObject</span> <em>(Object, 4 properties)</em><strong></strong>
+        </div>
+        <div class="midden-nest">
+          <ul class="midden-node">
+            <li class="midden-child">
+              <div class="midden-element">
+                <span>property1</span> <em>(String, 16 characters)</em><strong>a property value</strong>
+              </div>
+            </li>
+            <li class="midden-child">
+              <div class="midden-element">
+                <span>property2</span> <em>(String, 22 characters)</em><strong>another property value</strong>
+              </div>
+            </li>
+            <li class="midden-child">
+              <div class="midden-element">
+                <span>arrayProp</span> <em>(Array, 3 elements)</em><strong></strong>
+              </div>
+              <div class="midden-nest"><ul class="midden-node"><li class="midden-child"><div class="midden-element"><span>0</span> <em>(Number)</em><strong>1</strong></div></li>
+<li class="midden-child"><div class="midden-element"><span>1</span> <em>(Number)</em><strong>2</strong></div></li>
+<li class="midden-child"><div class="midden-element"><span>2</span> <em>(Number)</em><strong>3</strong></div></li></ul></div></li>
+<li class="midden-child"><div class="midden-element"><span>myMethod</span> <em>(Function)</em><strong></strong></div></li></ul></div></li></ul></div></div>
 
     <script src="build/js/app.js"></script>
   </body>

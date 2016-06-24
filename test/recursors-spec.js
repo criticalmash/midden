@@ -11,6 +11,7 @@ var expect = chai.expect;
 var assert = require('chai').assert;
 var _ = require('lodash');
 var jsdom = require("jsdom");
+var getType = require('get-object-type');
 
 // code to be tested
 var util = require('../lib/util');
@@ -77,14 +78,35 @@ describe('Midden Recursors', function() {
   });
 
   describe('#processNested() Object', function(){
-    it('should output HTML with object name');
-    it('should print all properties for object');
+    var objName = 'testObject';
+    var objInstance = {
+      'property1': 'a property value',
+      'property2': 'another property value',
+      'arrayProp': [1,2,3],
+      'myMethod' : function(){}
+    };
+    var objectHtml = util.processNested(objName, objInstance);
+    //console.log('objectHtml', objectHtml);
+    var objDom = jsdom.jsdom(objectHtml);
+
+    it('should print object name', function(){
+      var nameEl = objDom.querySelector("li > div > span");
+      expect(nameEl.textContent).to.equal(objName);
+    });
+
+    it('should count number of properties', function(){
+      var emEl = objDom.querySelector("div.midden-element em");
+      expect(emEl.textContent).to.equal('(Object, 4 properties)');
+    });
+
+    it('should print all properties for object', function(){
+      // ul > li > div
+      var valuesList = objDom.querySelectorAll('ul > li > div.midden-element');
+      expect(valuesList.length).equal(7);
+    });
   });
 
-  describe('#processNested() tree', function(){
-    it('should output HTML with object name');
-    it('should print all properties for object and their children');
-  });
+  
 
 
 });
