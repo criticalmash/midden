@@ -77,7 +77,7 @@ Choose one of files listed in the ```dist/styles``` directory.
 If you're using gulp or another build system to prepare your CSS, just include the full path (including extension) to one of these stylesheets in your list of sources.
 
 ###Javascript
-```dist/js/midden-client.js```
+Include ``dist/js/midden-client.js`` somewhere in your page or script pipeline. On page load, it will look for midden elements to attach event handlers to.
 
 
 # Customizing Styles
