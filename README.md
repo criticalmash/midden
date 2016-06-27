@@ -92,7 +92,7 @@ Feel free to submit [issues](https://github.com/criticalmash/midden/issues) or p
 
 The midden function also has a suite of unit tests. ```mocha test/*-spec.js```
 
-There is also a gulp file for generating client-side assets and integration testing. ``gulp default`` will spin up a server on port 8000.
+There is also a gulp file for generating client-side assets and integration testing. ``gulp default`` will spin up a server on port 8000. There, you can demo midden.
 
 # License
 © 2016 John O'Donnell (Critical Mash Inc.) Released under the [MIT license](LICENSE).

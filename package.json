@@ -1,21 +1,25 @@
 {
   "name": "midden",
   "version": "0.1.0",
-  "description": "Pretty data dumps for your browser (similar to PHP's Krumo)",
+  "description": "Pretty data dumps of node objects for your browser (similar to PHP's Krumo)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/*-spec.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://criticalmash@github.com/criticalmash/midden.git"
   },
   "keywords": [
+    "node",
+    "javascript",
+    "assemble",
+    "static site generation",
     "dump",
     "dpm",
     "krumo"
   ],
-  "author": "John O'Donnell (Critical Mash Inc.)",
+  "author": "John O'Donnell (Critical Mash Inc.) <john@criticalmash.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/criticalmash/midden/issues"
