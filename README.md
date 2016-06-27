@@ -41,7 +41,7 @@ We can select more properties for expansion and dig down into our object.
 The footer of our Midden display tells us which line midden was called from so that we can remove the call to midden when we're done.
 
 # Install
-Npm installation coming soon.
+```npm install midden```
 
 Also coming soon, a Handlebar Helper.
 
