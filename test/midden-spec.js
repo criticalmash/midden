@@ -47,7 +47,7 @@ describe('Midden', function() {
       });
 
       it('should have a variable label', function(){
-        var varLabel = objDom.querySelector('.midden-root > .midden-nest > .midden-node > .midden-child > .midden-element > span');
+        var varLabel = objDom.querySelector('.midden-root > .midden-node > .midden-child > .midden-element > span');
         expect(varLabel.textContent).to.equal(objName);
       });
 
@@ -61,7 +61,7 @@ describe('Midden', function() {
         objectHtml = midden(objInstance);
         //console.log('objectHtml', objectHtml);
         objDom = jsdom.jsdom(objectHtml);
-        var varLabel = objDom.querySelector('.midden-root > .midden-nest > .midden-node > .midden-child > .midden-element > span');
+        var varLabel = objDom.querySelector('.midden-root > .midden-node > .midden-child > .midden-element > span');
         expect(varLabel.textContent).to.equal('...');
       });
     });

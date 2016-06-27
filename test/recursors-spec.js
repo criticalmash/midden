@@ -47,6 +47,11 @@ describe('Midden Recursors', function() {
       var emEl = arrayDom.querySelector("div.midden-element em");
       expect(emEl.textContent).to.equal('(Array, ' + arrayValue.length + ' elements)');
     });
+
+    it('should not have a class of midden-parent on any arrayValue', function(){
+      var parentEl = arrayDom.querySelector(".midden-child .midden-parent");
+      expect(parentEl).to.not.exist;
+    });
   });
 
   describe('#processNested() Array', function(){
@@ -103,6 +108,11 @@ describe('Midden Recursors', function() {
       // ul > li > div
       var valuesList = objDom.querySelectorAll('ul > li > div.midden-element');
       expect(valuesList.length).equal(7);
+    });
+
+    it('should have a class of midden-parent for arrayProp', function(){
+      var parentEl = objDom.querySelector(".midden-parent");
+      expect(parentEl).to.exist;
     });
   });
 

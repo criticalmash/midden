@@ -14,7 +14,8 @@ describe('Midden Utilities', function() {
       it('should return valid HTML', function() {
         var input = {
           label: 'label-text',
-          data: {data: 'some data'}
+          data: {data: 'some data'},
+          calledFrom: 'templates-spec.js:18'
         };
         var actual = util.templates.main(input);
         expect(actual).is.a('string');

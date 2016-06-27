@@ -1,0 +1,69 @@
+/**
+ * Style Setting defaults
+ */
+$midden-font-size: 100% !default;
+$midden-background: #f9f9f9 !default;
+$midden-text-color: #8a8a8a !default;
+$midden-font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace !default;
+
+.midden-root{
+  border: solid 1px $midden-text-color;
+  background: $midden-background;
+
+  p{
+    text-align: center;
+  }
+
+  .midden-nest{
+    display: none;
+    padding: 0 0 0 1rem;
+    &.midden-show{
+      display: block;
+    }
+  }
+
+  .midden-node{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .midden-parent > .midden-element{
+    cursor: pointer;
+  }
+
+  .midden-element{
+    padding: .25rem 1rem;
+    border-top: solid 1px $midden-background;
+    background: darken($midden-background, 5%);
+  }
+  li li .midden-element{
+    background: darken($midden-background, 10%);
+  }
+  li li li .midden-element{
+    background: darken($midden-background, 15%);
+  }
+  li li li li .midden-element{
+    background: darken($midden-background, 20%);
+  }
+  li li li li li .midden-element{
+    background: darken($midden-background, 25%);
+  }
+  li li li li li li .midden-element{
+    background: darken($midden-background, 30%);
+  }
+  .midden-element:hover{
+    -webkit-box-shadow:inset 0 0 5px 0 rgba(0,0,0,.25);
+    box-shadow:inset 0 0 5px 0 rgba(0,0,0,.25);
+  }
+
+  .midden-stack{
+    margin-top: .25rem;
+    background: darken($midden-background, 20%);
+    color: lighten($midden-background, 40%);
+    padding: .25rem 1rem;
+    span{
+      font-family: $midden-font-family-monospace;
+    }
+  }
+}
