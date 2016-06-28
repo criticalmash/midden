@@ -48,7 +48,7 @@ Also coming soon, a Handlebar Helper.
 # Use
 
 ## Creating Midden Markup
-Call ```midden(variable, [label='...'])``` with the variable you want to examine and an optional label. 
+Call ```midden(variable, [label='...'], [depth=3])``` with the variable you want to examine and an optional label. The depth option affects the output of the *Called From* line, which is useful if you're wrapping midden() calls in another function. Higher numbers move you further up the stack.
 
 ```js
 var midden = require('midden');
