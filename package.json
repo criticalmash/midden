@@ -1,6 +1,6 @@
 {
   "name": "midden",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Pretty data dumps of node objects for your browser (similar to PHP's Krumo)",
   "main": "index.js",
   "scripts": {
