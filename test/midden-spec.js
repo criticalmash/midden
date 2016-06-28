@@ -51,12 +51,6 @@ describe('Midden', function() {
         expect(varLabel.textContent).to.equal(objName);
       });
 
-      it('should mention file:line it was called from', function(){
-        var stackInfo = 'midden/test/midden-spec.js:40'; // Note: update with current filename:line
-        var stackEl = objDom.querySelector('.midden-stack');
-        expect(stackEl.textContent).to.contain(stackInfo, 'check test to make sure line hasn\'t changed');
-      });
-
       it('should use default label text when no label is given', function(){
         objectHtml = midden(objInstance);
         //console.log('objectHtml', objectHtml);

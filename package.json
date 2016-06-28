@@ -1,6 +1,6 @@
 {
   "name": "midden",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pretty data dumps of node objects for your browser (similar to PHP's Krumo)",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,11 @@
     "dpm",
     "krumo"
   ],
-  "author": "John O'Donnell (Critical Mash Inc.) <john@criticalmash.com>",
+  "author": {
+    "email": "john@criticalmash.com",
+    "name": "John O'Donnell",
+    "url": "http://criticalmash.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/criticalmash/midden/issues"
