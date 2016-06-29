@@ -1,7 +1,7 @@
 # midden
 Pretty data dumps to the browser for your node apps (similar to PHP's Krumo)
 
-**NOTE:** midden is currently in beta, but should soon be complete. (June 27, 2016)
+**NOTE:** midden is currently in beta, but is ready for testing. See contributing below on reporting issues.
 
 # About
 > **Midden**
@@ -41,9 +41,9 @@ We can select more properties for expansion and dig down into our object.
 The footer of our Midden display tells us which line midden was called from so that we can remove the call to midden when we're done.
 
 # Install
-```npm install midden```
+```npm install midden --save```
 
-Also coming soon, a Handlebar Helper.
+Or use [midden-helper](https://github.com/criticalmash/handlebars-midden#readme) a Handlebars helper to use with [Assemble.js](https://github.com/assemble/assemble) and other site generation tools.
 
 # Use
 
