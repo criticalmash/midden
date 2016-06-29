@@ -8,14 +8,7 @@
   
   function toggleNest(e){
     var nest = this.parentNode.querySelector('.midden-nest');
-    if(nest){
-      if(nest.style.display === 'block'){
-        nest.style.display = 'none';
-      }else{
-        nest.style.display = 'block';
-      }
-    }
-    
+    nest.classList.toggle('midden-show');
   }
 
   // find all 
