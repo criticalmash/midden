@@ -33,7 +33,7 @@ describe('Midden Formaters', function() {
         var testCases = [
           {key: 'variable-name', value: 'A certain string'},
           {key: 'varname', value: 'Another random string'},
-          {key: 'hey', value: '<div>Even more Content wrapped up pretty</div>'}
+          {key: 'hey', value: 'Even more Content wrapped up pretty'}
         ];
 
         testCases.forEach(function (tc) {
@@ -65,6 +65,18 @@ describe('Midden Formaters', function() {
       it('should place the whole string in a child element', function(){
         var childEl = actualDom.querySelector('div.midden-node');
         expect(childEl.textContent).to.contain(longString);
+      });
+    });
+
+    
+    describe('#processValue() HTML String', function(){
+      var htmlString = "<p>I'm in your markup... addding some <script src=\"/haxx.js\"></script>";
+      var actualHtml = util.processNested('htmlString', htmlString);
+      //console.log('processValue() HTML String', actualHtml);
+      var actualDom = jsdom.jsdom(actualHtml);
+
+      it('should escape HTML and present safe strings', function(){
+        expect(actualHtml).to.not.contain('<script');
       });
     });
 
