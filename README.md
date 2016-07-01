@@ -38,6 +38,8 @@ We can select more properties for expansion and dig down into our object.
 
 ![midden expand-2](./src/images/midden-expand-2.gif)
 
+Long text variables are shortened for display and can be expanded like objects and arrays. 
+
 The footer of our Midden display tells us which line midden was called from so that we can remove the call to midden when we're done.
 
 # Install
@@ -48,7 +50,7 @@ Or use [midden-helper](https://github.com/criticalmash/handlebars-midden#readme)
 # Use
 
 ## Creating Midden Markup
-Call ```midden(variable, [label='...'], [depth=3])``` with the variable you want to examine and an optional label. The depth option affects the output of the *Called From* line, which is useful if you're wrapping midden() calls in another function. Higher numbers move you further up the stack.
+Call ```midden(variable, [label='...'], [stackConfig=3])``` with the variable you want to examine and an optional label.
 
 ```js
 var midden = require('midden');
@@ -62,6 +64,23 @@ var middenHtml = midden(yourObject, 'object name');
 
 ```
 A string of html will be returned that you then can insert into your app's output.
+
+### stackConfig variable *optional*
+When wrapping midden() in another function, you might want to change what the *Called From* line presents. Normally, the path and line info is created by inspecting the call stack and grabbing the needed info from the third line up. (Which would be the file:line where midden is called.)
+
+If you're wrapping midden in another function, and want to know where that function is being called from instead, you can bump stackConfig to `4` and it will output the path:line of whatever's calling your wrapper.
+
+```js
+function middenWrapper(myObj, objName){
+	return midden(myObj, objName, 4);
+}
+```
+
+You can also pass a string value to stackConfig instead. This might be useful if your wrapping function is a template helper and you want midden to present the path:line to the template that calls your helper. Whatever string you pass will appear in place of the path:line.
+
+```js
+var middenHtml = midden(myObj, objName, '/path/to/template.hbs:12');
+```
 
 ## Including client-side code
 
