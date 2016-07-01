@@ -58,12 +58,12 @@ describe('Midden Recursors', function() {
     var arrayName = 'arrname';
     var arrayValue = ['value one', 'value two', 'value 3'];
     var arrayHtml = util.processNested('arrname', arrayValue);
-    //console.log('arrayHtml', arrayHtml);
+    console.log('arrayHtml', arrayHtml);
     var arrayDom = jsdom.jsdom(arrayHtml);
 
     it('should print all values for array', function(){
       // ul > li > div
-      var valuesList = arrayDom.querySelectorAll('ul > li > div');
+      var valuesList = arrayDom.querySelectorAll('ul > li > div.midden-element');
       expect(valuesList.length).equal(arrayValue.length);
     });
   });
