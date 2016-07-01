@@ -49,7 +49,7 @@ describe('Midden Formaters', function() {
     describe('#processValue() Long String', function() {
       var longString = "This is the begining of a very long string. It just goes on and one and on. It could go on for several paragraphs if we want it to. But this should be long enough.";
       var actualHtml = util.processNested('longString', longString);
-      console.log('processValue() Long String', actualHtml);
+      //console.log('processValue() Long String', actualHtml);
       var actualDom = jsdom.jsdom(actualHtml);
 
       it('should accept a long string and present an abbreviated preview', function(){

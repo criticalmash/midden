@@ -72,12 +72,12 @@ describe('Midden', function() {
 
     subObject.subProp = 2;
 
-    console.log('subObject', subObject);
+    //console.log('subObject', subObject);
 
     var actualHtml = midden(subObject);
     var actualDom = jsdom.jsdom(actualHtml);
 
-    console.log('actualHtml', actualHtml);
+    //console.log('actualHtml', actualHtml);
 
     it('should list inherited properties', function(){
       expect(actualHtml).to.contain('protoProp');
