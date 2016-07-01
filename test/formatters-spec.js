@@ -46,6 +46,28 @@ describe('Midden Formaters', function() {
       });
     });
 
+    describe('#processValue() Long String', function() {
+      var longString = "This is the begining of a very long string. It just goes on and one and on. It could go on for several paragraphs if we want it to. But this should be long enough.";
+      var actualHtml = util.processNested('longString', longString);
+      //console.log('processValue() Long String', actualHtml);
+      var actualDom = jsdom.jsdom(actualHtml);
+
+      it('should accept a long string and present an abbreviated preview', function(){
+        var strongEl = actualDom.querySelector('.midden-element strong');
+        expect(strongEl.textContent.length).to.be.below(64);
+      });
+
+      it('should have elipsis at the end of the preview', function(){
+        var strongEl = actualDom.querySelector('.midden-element strong');
+        expect(strongEl.textContent.slice(-1)).to.equal('…');
+      });
+
+      it('should place the whole string in a child element', function(){
+        var childEl = actualDom.querySelector('div.midden-node');
+        expect(childEl.textContent).to.contain(longString);
+      });
+    });
+
     describe('#processValue() Number', function() {
       it('should accept a key:number and return proper HTML', function(){
         var lable = 'number name';

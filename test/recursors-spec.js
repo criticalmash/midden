@@ -63,7 +63,7 @@ describe('Midden Recursors', function() {
 
     it('should print all values for array', function(){
       // ul > li > div
-      var valuesList = arrayDom.querySelectorAll('ul > li > div');
+      var valuesList = arrayDom.querySelectorAll('ul > li > div.midden-element');
       expect(valuesList.length).equal(arrayValue.length);
     });
   });

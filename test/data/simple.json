@@ -1,6 +1,7 @@
 {
   "propert1": "value one",
   "property2": "value two",
+  "longString": "This is the begining of a very long string. It just goes on and one and on. It could go on for several paragraphs if we want it to. But this should be long enough.",
   "array": [10,20,30,40],
   "objarray": [{"name":"obj1"}, {"name":"obj2", "units": [2,4,8]}, {"name":"obj3"}]
 }

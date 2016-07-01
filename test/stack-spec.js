@@ -46,9 +46,34 @@ describe('Midden stack output', function() {
       it('should be editable', function(){
         var objectHtml = midden(objInstance, objName, 2);
         var objDom = jsdom.jsdom(objectHtml);
-        var stackInfo = 'index.js:8'; // Note: update with current filename:line
+        var stackInfo = 'index.js:12'; // Note: update with current filename:line
         var stackEl = objDom.querySelector('.midden-stack');
-        expect(stackEl.textContent).to.contain(stackInfo, 'check test to make sure line hasn\'t changed');
+        expect(stackEl.textContent).to.contain(stackInfo, 'check midden/index.js to make sure line hasn\'t changed');
+      });
+    });
+
+    describe('midden stack output alternate text', function(){
+      var objName = 'testObject';
+      var objInstance = {
+        'property1': 'a property value'
+      };
+
+      it('should accept a string and use it in place of its own calculation', function(){
+        var altPath = '/src/content/about.hbs:2';
+        var objectHtml = midden(objInstance, objName, altPath);
+        //console.log('stack alternate', objectHtml);
+        var objDom = jsdom.jsdom(objectHtml);
+        var stackEl = objDom.querySelector('.midden-stack');
+        expect(stackEl.textContent).to.contain(altPath);
       });
     });
 });
+
+
+
+
+
+
+
+
+

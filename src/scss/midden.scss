@@ -9,6 +9,7 @@ $midden-font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace !
 .midden-root{
   border: solid 1px $midden-text-color;
   background: $midden-background;
+  font-size: $midden-font-size;
 
   p{
     text-align: center;
@@ -56,10 +57,17 @@ $midden-font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace !
     -webkit-box-shadow:inset 0 0 5px 0 rgba(0,0,0,.25);
     box-shadow:inset 0 0 5px 0 rgba(0,0,0,.25);
   }
+  .midden-text{
+    font-family: $midden-font-family-monospace;
+    background: darken($midden-background, 5%);
+    padding: .25rem 1rem;
+    border-top: solid 1px $midden-background;
+    line-height: 1.3;
+  }
 
   .midden-stack{
     margin-top: .25rem;
-    background: darken($midden-background, 20%);
+    background: darken($midden-background, 40%);
     color: lighten($midden-background, 40%);
     padding: .25rem 1rem;
     span{
